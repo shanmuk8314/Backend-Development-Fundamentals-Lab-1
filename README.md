@@ -13,6 +13,12 @@
 | Registration Number | 252U1R9137 |
 | Section | CSE - GEN-AI - 2C |
 
+## Live Deployment
+
+**Deployment Link:** [Open Live Application](https://backend-development-fundamentals-lab-1.onrender.com/)
+
+The application is deployed on Render and can be accessed through the public URL above.
+
 ## Project Objective
 
 This lab demonstrates the fundamentals of creating and running a Node.js backend server using the built-in HTTP module and Express.js. It covers project initialization with npm, dependency installation, server setup, route handling, JSON responses, date and time generation, HTTP status codes, and handling unknown routes.
@@ -24,6 +30,8 @@ This lab demonstrates the fundamentals of creating and running a Node.js backend
 - npm (Node Package Manager)
 - JavaScript (CommonJS)
 - HTTP and JSON response handling
+- Render (Deployment Platform)
+- GitHub (Version Control and Repository Hosting)
 
 ## Project Folder Structure
 
@@ -39,10 +47,8 @@ lab-01/
     ├── home.png
     ├── about.png
     ├── time.png
-    └── 404.png
+    └── not-found.png
 ```
-
-The `screenshots/` directory contains the screenshots of the tested endpoints. The `.gitignore` file excludes dependencies and environment-specific secrets.
 
 ## Installation and Execution
 
@@ -50,25 +56,25 @@ The `screenshots/` directory contains the screenshots of the tested endpoints. T
 
 - Node.js and npm installed on the computer.
 - Visual Studio Code or another code editor.
+- Git, if using Git for version control.
 
-### Install Dependencies
+### 1. Initialize the Project
 
-1. Open a terminal in the project directory.
-2. Initialize the project if it has not already been initialized:
+If starting from an empty project directory, run:
 
-   ```bash
-   npm init -y
-   ```
+```bash
+npm init -y
+```
 
-3. Install Express.js:
+### 2. Install Express.js
 
-   ```bash
-   npm install express
-   ```
+Run the following command in the project directory:
 
-### Run the Basic Node.js HTTP Server
+```bash
+npm install express
+```
 
-Execute:
+### 3. Run the Basic Node.js HTTP Server
 
 ```bash
 node server.js
@@ -82,17 +88,13 @@ The server responds with `Hello`.
 
 Stop the server using `Ctrl + C` before starting the Express server.
 
-### Run the Express Server
-
-Execute:
+### 4. Run the Express Server
 
 ```bash
 node app.js
 ```
 
-The Express application listens on port 3000.
-
-Stop the server using `Ctrl + C`.
+The Express application listens on port 3000 locally and uses the port configured by the hosting platform when deployed.
 
 ## Endpoints
 
@@ -103,32 +105,32 @@ Stop the server using `Ctrl + C`.
 | GET | `/time` | Returns the current date and time using `new Date()` | 200 |
 | Any | Any unknown path | Returns a Page Not Found message | 404 |
 
-### Example Requests
+### Live Endpoint URLs
 
-- Home: `http://localhost:3000/`
-- About: `http://localhost:3000/about`
-- Time: `http://localhost:3000/time`
-- Unknown route: `http://localhost:3000/unknown`
+- **Home:** [Open Home Route](https://backend-development-fundamentals-lab-1.onrender.com/)
+- **About:** [Open About Route](https://backend-development-fundamentals-lab-1.onrender.com/about)
+- **Time:** [Open Time Route](https://backend-development-fundamentals-lab-1.onrender.com/time)
+- **404 Test:** [Test Unknown Route](https://backend-development-fundamentals-lab-1.onrender.com/unknown)
 
 ## Screenshots
 
-The following screenshots demonstrate the successful execution of the application and its HTTP endpoints.
+Screenshots of the working application are stored in the `screenshots/` directory.
 
 ### 1. Home Route
 
-![Home Route](screenshots/home.png)
+![Home Route](./screenshots/home.png)
 
 ### 2. About Route
 
-![About Route](screenshots/about.png)
+![About Route](./screenshots/about.png)
 
 ### 3. Time Route
 
-![Time Route](screenshots/time.png)
+![Time Route](./screenshots/time.png)
 
 ### 4. Unknown Route — 404 Not Found
 
-![404 Route](screenshots/404.png)
+![404 Route](./screenshots/not-found.png)
 
 ## Problems Faced and Solutions
 
@@ -151,12 +153,7 @@ The following screenshots demonstrate the successful execution of the applicatio
 - Generated the current date and time using `new Date()`.
 - Handled unknown routes using HTTP status code 404.
 - Tested endpoints and prepared project documentation for GitHub submission.
-
-## Deployment
-
-The application is currently running locally at `http://localhost:3000`.
-
-After deploying the application to a Node.js-compatible hosting service, replace this section with the actual public URL. Configure the hosting service to install dependencies using `npm install` and start the application using `node app.js`, if `app.js` is the deployed entry point.
+- Deployed a Node.js and Express application using Render.
 
 ## Git Hygiene
 
